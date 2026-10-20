@@ -3,89 +3,172 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fatimah611 | AI &amp; Automation Developer</title>
-<meta name="description" content="Portfolio of AI and automation projects: voice agents, chatbots, outreach automation and computer vision.">
+<title>Fatima Tariq | AI &amp; Automation Developer</title>
+<meta name="description" content="Portfolio of Fatima Tariq: AI voice agents, chatbots, outreach automation and computer vision projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fafaf7;--fg:#1c1c1a;--muted:#5f5f58;--card:#ffffff;--line:#e5e4de;--accent:#1f6f5c}
-@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#efeee9;--muted:#a3a29a;--card:#1d1d1b;--line:#2d2d2a;--accent:#5fc4a8}}
+:root{--ink:#0f1226;--panel:#171b38;--panel2:#1f2447;--text:#eef0ff;--muted:#a4a9cf;--amber:#ffc857;--lilac:#b7a6ff;--line:#2c3260}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{padding:72px 0 24px}
-h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 12px}
-.lead{color:var(--muted);max-width:640px;font-size:1.1rem;margin:0}
-h2{font-size:1.25rem;margin:48px 0 16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px}
-.card h3{margin:0;font-size:1.1rem}
-.card p{margin:0;color:var(--muted);font-size:.95rem}
-.tags,.skills{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
-.tags li{font-size:.78rem;padding:2px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
-.skills{gap:8px}
-.skills li{padding:4px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);font-size:.9rem}
-.links{display:flex;gap:16px;margin-top:auto;padding-top:4px;font-size:.92rem}
-a{color:var(--accent);text-decoration:none;font-weight:600}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--text);font:17px/1.65 "Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0}
+a{color:var(--amber);font-weight:600;text-decoration:none}
 a:hover{text-decoration:underline}
-footer{padding:48px 0 64px;color:var(--muted);font-size:.9rem}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--lilac);outline-offset:3px;border-radius:6px}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:88px 0 64px}
+h1{font-size:clamp(2.7rem,7vw,4.8rem);line-height:1.02;letter-spacing:-.02em;font-weight:800}
+.role{margin:20px 0 0;color:var(--muted);font-size:1.15rem;max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none}
+.btn.main{background:var(--amber);color:#1a1630}
+.btn.main:hover{text-decoration:none;filter:brightness(1.07)}
+.btn.ghost{border:1px solid var(--line);color:var(--text)}
+.btn.ghost:hover{text-decoration:none;background:var(--panel)}
+
+.call{background:var(--panel2);border-radius:22px;padding:24px}
+.call .status{font-size:.9rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.call .status i{width:9px;height:9px;border-radius:50%;background:var(--amber);display:inline-block}
+.wave{display:flex;align-items:center;gap:4px;height:64px;margin:18px 0}
+.wave span{width:5px;border-radius:3px;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+.msg{max-width:84%;padding:10px 14px;border-radius:14px;margin:8px 0;font-size:.95rem;line-height:1.45}
+.msg.caller{background:var(--panel);color:var(--text);border-bottom-left-radius:4px}
+.msg.aria{background:var(--amber);color:#1a1630;margin-left:auto;border-bottom-right-radius:4px}
+
+section{padding:48px 0}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);letter-spacing:-.01em}
+.sub{color:var(--muted);margin:8px 0 28px}
+
+.feature{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;background:var(--panel2);border-radius:22px;padding:32px;margin-bottom:20px}
+.feature h3{font-size:1.6rem;margin-bottom:10px}
+.feature p{margin:0;color:var(--muted)}
+.feature .side{display:flex;flex-direction:column;justify-content:center;gap:14px;align-items:flex-start}
+.feature .side p{color:var(--text)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--panel);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:1.2rem}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+.tags li{font-size:.8rem;padding:2px 10px;border-radius:999px;background:rgba(183,166,255,.14);color:var(--lilac)}
+.card .go{margin-top:auto}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.skills h3{font-size:1.05rem;color:var(--amber);margin-bottom:8px}
+.skills p{margin:0;color:var(--muted)}
+
+footer{padding:40px 0 64px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:820px){
+ .hero{grid-template-columns:1fr;padding:56px 0 40px;gap:36px}
+ .feature{grid-template-columns:1fr;padding:24px}
+ .cards{grid-template-columns:1fr}
+ .skills{grid-template-columns:1fr;gap:20px}
+}
+@media (prefers-reduced-motion:reduce){.wave span{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header>
-<h1>Fatimah611</h1>
-<p class="lead">AI and automation developer. I build voice agents, chatbots and outreach automation with Python, JavaScript and LLMs, and I enjoy turning messy manual workflows into reliable tools.</p>
-</header>
 
-<main>
-<h2>Projects</h2>
-<div class="grid">
-
-<article class="card">
-<h3>AI Voice Receptionist Demo</h3>
-<p>A white-label React demo of an LLM-powered voice receptionist for restaurants. Visitors start a live voice conversation that answers common questions and takes reservation details. Tested on desktop and mobile.</p>
-<ul class="tags"><li>React</li><li>Vapi</li><li>LLM</li><li>Prompt engineering</li></ul>
-<div class="links"><a href="https://ai-voice-receptionist-demo-sable.vercel.app" target="_blank" rel="noopener">Live demo &rarr;</a><a href="https://github.com/Fatimah611/ai-voice-receptionist-demo" target="_blank" rel="noopener">Code</a></div>
-</article>
-
-<article class="card">
-<h3>AI Email Outreach System</h3>
-<p>A Flask web app for B2B campaigns: reusable templates, Excel lead import, rate-limited sending and multi-step automated follow-ups, with a web interface for managing campaigns across markets.</p>
-<ul class="tags"><li>Python</li><li>Flask</li><li>SMTP</li><li>Automation</li></ul>
-<div class="links"><a href="https://github.com/Fatimah611/ai-email-outreach-system" target="_blank" rel="noopener">Code</a></div>
-</article>
-
-<article class="card">
-<h3>LeadFinder</h3>
-<p>A browser-automation tool that extracts structured business data (name, email, website, city, socials) from Google Maps at scale, with a web UI and CSV/Excel export. Includes stable link extraction to keep records accurate.</p>
-<ul class="tags"><li>Python</li><li>Playwright</li><li>Flask</li><li>Pandas</li></ul>
-<div class="links"><a href="https://github.com/Fatimah611/leadfinder-google-maps" target="_blank" rel="noopener">Code</a></div>
-</article>
-
-<article class="card">
-<h3>GenAI Financial Chatbot</h3>
-<p>A chatbot combining rule-based logic with LLM-driven answers. Uses Python and Pandas to analyse 10-K and 10-Q reports and generate financial insights. Built for the BCG GenAI virtual experience on Forage.</p>
-<ul class="tags"><li>Python</li><li>Pandas</li><li>LLM</li><li>Jupyter</li></ul>
-<div class="links"><a href="https://github.com/Fatimah611/genai-financial-chatbot-bcg" target="_blank" rel="noopener">Code</a></div>
-</article>
-
-<article class="card">
-<h3>Gun Detection with YOLOv5</h3>
-<p>A computer vision notebook that detects firearms in images with a YOLOv5 model and saves annotated GUN / NO GUN results, plus an LSTM classification experiment evaluated with a confusion matrix.</p>
-<ul class="tags"><li>PyTorch</li><li>YOLOv5</li><li>TensorFlow</li><li>scikit-learn</li></ul>
-<div class="links"><a href="https://github.com/Fatimah611/cnn-object-detection" target="_blank" rel="noopener">Code</a></div>
-</article>
-
+<div class="hero">
+ <div>
+  <h1>Fatima Tariq</h1>
+  <p class="role">I build AI voice agents, chatbots and automation that take repetitive work off people's plates. Python, JavaScript and LLMs.</p>
+  <div class="actions">
+   <a class="btn main" href="#projects">See my projects</a>
+   <a class="btn ghost" href="https://github.com/Fatimah611" target="_blank" rel="noopener">View GitHub</a>
+  </div>
+ </div>
+ <div class="call" aria-label="Sample conversation with a voice receptionist">
+  <div class="status"><i></i>Sample call with a demo restaurant</div>
+  <div class="wave" id="wave" aria-hidden="true"></div>
+  <div class="msg caller">Hi, do you have a table for four on Friday evening?</div>
+  <div class="msg aria">We do! What time works best for you?</div>
+  <div class="msg caller">Around half seven.</div>
+  <div class="msg aria">Perfect. Can I take a name for the booking?</div>
+ </div>
 </div>
 
-<h2>Skills</h2>
-<ul class="skills">
-<li>Python</li><li>JavaScript</li><li>React</li><li>Flask</li><li>SQL</li><li>Pandas</li>
-<li>LLMs and prompt engineering</li><li>Voice agents and chatbots</li><li>Agentic workflows</li>
-<li>n8n</li><li>Zapier</li><li>API integrations</li><li>Machine learning</li><li>Computer vision</li>
-</ul>
-</main>
+<section id="projects">
+ <h2>Projects</h2>
+ <p class="sub">Built, tested and published. The code is open on GitHub.</p>
 
-<footer>All projects are open on <a href="https://github.com/Fatimah611" target="_blank" rel="noopener">GitHub</a>.</footer>
+ <div class="feature">
+  <div>
+   <h3>AI voice receptionist</h3>
+   <p>A white-label React demo of an LLM-powered voice receptionist for restaurants. Visitors start a live voice conversation that answers common questions and collects reservation details. Tested on desktop and mobile.</p>
+   <ul class="tags" style="margin-top:14px"><li>React</li><li>Vapi</li><li>LLM</li><li>Prompt engineering</li></ul>
+  </div>
+  <div class="side">
+   <p>Open it, allow the microphone and talk to the receptionist.</p>
+   <a class="btn main" href="https://ai-voice-receptionist-demo-sable.vercel.app" target="_blank" rel="noopener">Try the live demo</a>
+   <a href="https://github.com/Fatimah611/ai-voice-receptionist-demo" target="_blank" rel="noopener">View the code</a>
+  </div>
+ </div>
+
+ <div class="cards">
+  <article class="card">
+   <h3>Email outreach system</h3>
+   <p>A Flask web app for B2B campaigns: reusable templates, Excel lead import, rate-limited sending and multi-step automated follow-ups, with a web interface for managing campaigns across markets.</p>
+   <ul class="tags"><li>Python</li><li>Flask</li><li>SMTP</li><li>Automation</li></ul>
+   <a class="go" href="https://github.com/Fatimah611/ai-email-outreach-system" target="_blank" rel="noopener">View the code</a>
+  </article>
+  <article class="card">
+   <h3>LeadFinder</h3>
+   <p>A browser-automation tool that extracts structured business data (name, email, website, city, socials) from Google Maps at scale, with a web UI and CSV or Excel export.</p>
+   <ul class="tags"><li>Python</li><li>Playwright</li><li>Flask</li><li>Pandas</li></ul>
+   <a class="go" href="https://github.com/Fatimah611/leadfinder-google-maps" target="_blank" rel="noopener">View the code</a>
+  </article>
+  <article class="card">
+   <h3>GenAI financial chatbot</h3>
+   <p>A chatbot that combines rule-based logic with LLM answers. It uses Python and Pandas to analyse 10-K and 10-Q reports and generate financial insights. Built for the BCG GenAI virtual experience on Forage.</p>
+   <ul class="tags"><li>Python</li><li>Pandas</li><li>LLM</li><li>Jupyter</li></ul>
+   <a class="go" href="https://github.com/Fatimah611/genai-financial-chatbot-bcg" target="_blank" rel="noopener">View the code</a>
+  </article>
+  <article class="card">
+   <h3>Gun detection with YOLOv5</h3>
+   <p>A computer vision notebook that detects firearms in images with a YOLOv5 model and saves annotated results, plus an LSTM classification experiment evaluated with a confusion matrix.</p>
+   <ul class="tags"><li>PyTorch</li><li>YOLOv5</li><li>TensorFlow</li><li>scikit-learn</li></ul>
+   <a class="go" href="https://github.com/Fatimah611/cnn-object-detection" target="_blank" rel="noopener">View the code</a>
+  </article>
+ </div>
+</section>
+
+<section>
+ <h2>Skills</h2>
+ <p class="sub">What I use day to day.</p>
+ <div class="skills">
+  <div><h3>Build</h3><p>Python, JavaScript, React, Flask, SQL, Pandas, object-oriented design</p></div>
+  <div><h3>AI</h3><p>LLMs, prompt engineering, voice agents and chatbots, agentic workflows, machine learning, computer vision</p></div>
+  <div><h3>Automate</h3><p>n8n, Zapier, API integrations, browser automation with Playwright</p></div>
+ </div>
+</section>
+
 </div>
+<footer>
+ <div class="wrap">
+  <span>Fatima Tariq</span>
+  <a href="https://github.com/Fatimah611" target="_blank" rel="noopener">github.com/Fatimah611</a>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var w=document.getElementById('wave');
+ if(!w){return;}
+ for(var i=0;i<36;i++){
+  var b=document.createElement('span');
+  b.style.height=(14+Math.abs(Math.sin(i*0.55))*34+((i*7)%11))+'px';
+  b.style.animationDelay=(i*0.06)+'s';
+  b.style.background=(i%3===0)?'var(--lilac)':'var(--amber)';
+  w.appendChild(b);
+ }
+})();
+</script>
 </body>
 </html>
